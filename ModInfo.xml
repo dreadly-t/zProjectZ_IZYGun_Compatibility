@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ProjectZ_IZYGunPack_Compatibility"/>
+	<DisplayName value="Project Z with IZY Gun Pack"/>
+	<Version value="1.0.0"/>
+	<Description value="Allows IZYs guns to count towards Project Z progression, passive skills, and contracts"/>
+	<Author value="Dreadly"/>
+	<Website value=""/>
+</xml>

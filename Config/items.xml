@@ -1,0 +1,221 @@
+<configs>
+
+	<!-- *** Marksman Rifles (perkDeadEye) -->
+	<append xpath="/items/item[starts-with(@name, 'IZYgun')]/property[@name='Tags' and contains(@value, 'perkDeadEye')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Rifle,Holding_Range"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Rifle,Holding_Range"/>
+
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Rifle">
+				<requirement name="!HasBuff" buff="Holding_Rifle"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Range">
+				<requirement name="!HasBuff" buff="Holding_Range"/></triggered_effect>
+		</effect_group>
+	</append>
+
+
+	<!-- *** Shotguns (perkBoomstick) -->
+	<append xpath="/items/item[starts-with(@name, 'IZYgun')]/property[@name='Tags' and contains(@value, 'perkBoomstick')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Shotgun,Holding_Range"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Shotgun,Holding_Range"/>
+
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Shotgun">
+				<requirement name="!HasBuff" buff="Holding_Shotgun"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Range">
+				<requirement name="!HasBuff" buff="Holding_Range"/></triggered_effect>
+		</effect_group>
+	</append>
+
+
+	<!-- *** Machine Guns (perkMachineGunner) -->
+	<append xpath="/items/item[starts-with(@name, 'IZYgun')]/property[@name='Tags' and contains(@value, 'perkMachineGunner')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_MachineGun,Holding_Range"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_MachineGun,Holding_Range"/>
+			
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_MachineGun">
+				<requirement name="!HasBuff" buff="Holding_MachineGun"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Range">
+				<requirement name="!HasBuff" buff="Holding_Range"/></triggered_effect>
+		</effect_group>
+	</append>
+
+
+	<!-- *** Pistols (perkGunslinger) -->
+	<append xpath="/items/item[starts-with(@name, 'IZYgun')]/property[@name='Tags' and contains(@value, 'perkGunslinger')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Pistol,Holding_Range"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Pistol,Holding_Range"/>
+
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Pistol">
+				<requirement name="!HasBuff" buff="Holding_Pistol"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Range">
+				<requirement name="!HasBuff" buff="Holding_Range"/></triggered_effect>
+		</effect_group>
+	</append>
+
+
+	<!-- *** Archery - Bows & Crossbows (perkArchery) -->
+	<append xpath="/items/item[starts-with(@name, 'IZYgun')]/property[@name='Tags' and contains(@value, 'perkArchery')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Archery,Holding_Range"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Archery,Holding_Range"/>
+
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Archery">
+				<requirement name="!HasBuff" buff="Holding_Archery"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Range">
+				<requirement name="!HasBuff" buff="Holding_Range"/></triggered_effect>
+		</effect_group>
+	</append>
+
+
+	<!-- *** Spears (perkJavelinMaster)-->
+	<append xpath="/items/item[starts-with(@name, 'IZYMelee')]/property[@name='Tags' and contains(@value, 'perkJavelinMaster')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Spear,Holding_Melee,Holding_Melee_Heavy"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Spear,Holding_Melee,Holding_Melee_Heavy"/>
+
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Spear">
+				<requirement name="!HasBuff" buff="Holding_Spear"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Spear">
+				<requirement name="!HasBuff" buff="Holding_Spear"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee_Heavy">
+				<requirement name="!HasBuff" buff="Holding_Melee_Heavy"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee_Heavy">
+				<requirement name="!HasBuff" buff="Holding_Melee_Heavy"/></triggered_effect>
+		</effect_group>
+	</append>
+	
+
+	<!-- *** Sledgehammers (perkSkullCrusher)-->
+	<append xpath="/items/item[starts-with(@name, 'IZYMelee')]/property[@name='Tags' and contains(@value, 'perkSkullCrusher')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Sledgehammer,Holding_Melee,Holding_Melee_Heavy"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Sledgehammer,Holding_Melee,Holding_Melee_Heavy"/>
+
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Sledgehammer">
+				<requirement name="!HasBuff" buff="Holding_Sledgehammer"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Sledgehammer">
+				<requirement name="!HasBuff" buff="Holding_Sledgehammer"/></triggered_effect>		
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>		
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee_Heavy">
+				<requirement name="!HasBuff" buff="Holding_Melee_Heavy"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee_Heavy">
+				<requirement name="!HasBuff" buff="Holding_Melee_Heavy"/></triggered_effect>
+		</effect_group>
+	</append>
+
+
+	<!-- *** Blades (perkDeepCuts) -->
+	<append xpath="/items/item[starts-with(@name, 'IZYMelee')]/property[@name='Tags' and contains(@value, 'perkDeepCuts')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Knife,Holding_Melee,Holding_Melee_Light"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Knife,Holding_Melee,Holding_Melee_Light"/>
+
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Knife">
+				<requirement name="!HasBuff" buff="Holding_Knife"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Knife">
+				<requirement name="!HasBuff" buff="Holding_Knife"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee_Light">
+				<requirement name="!HasBuff" buff="Holding_Melee_Light"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee_Light">
+				<requirement name="!HasBuff" buff="Holding_Melee_Light"/></triggered_effect>
+		</effect_group>
+	</append>
+	
+
+	<!-- *** Batons (perkElectrocutioner) -->
+	<append xpath="/items/item[starts-with(@name, 'IZYMelee')]/property[@name='Tags' and contains(@value, 'perkElectrocutioner')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_StunBaton,Holding_Melee,Holding_Melee_Light"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_StunBaton,Holding_Melee,Holding_Melee_Light"/>
+
+			<!-- Safety net for weapon swap bug -->
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_StunBaton">
+				<requirement name="!HasBuff" buff="Holding_StunBaton"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_StunBaton">
+				<requirement name="!HasBuff" buff="Holding_StunBaton"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee_Light">
+				<requirement name="!HasBuff" buff="Holding_Melee_Light"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee_Light">
+				<requirement name="!HasBuff" buff="Holding_Melee_Light"/></triggered_effect>
+		</effect_group>
+	</append>
+
+
+	<!-- ************************************************************************************ -->
+	<!-- ************************************************************************************ -->
+	<!-- AS OF 13th Jan, 2026 There are no Clubs or Knuckles -->
+	<!-- Will throw WRN XML in console if enabled -->
+	<!-- ************************************************************************************ -->
+	<!-- ************************************************************************************ -->
+
+	<!-- *** Clubs (perkPummelPete) - NONE YET, FUTURE PROOFING -->
+	<!-- <append xpath="/items/item[starts-with(@name, 'IZYMelee')]/property[@name='Tags' and contains(@value, 'perkPummelPete')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Club,Holding_Melee,Holding_Melee_Heavy"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Club,Holding_Melee,Holding_Melee_Heavy"/>
+
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Club">
+				<requirement name="!HasBuff" buff="Holding_Club"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Club">
+				<requirement name="!HasBuff" buff="Holding_Club"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee_Heavy">
+				<requirement name="!HasBuff" buff="Holding_Melee_Heavy"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee_Heavy">
+				<requirement name="!HasBuff" buff="Holding_Melee_Heavy"/></triggered_effect>
+		</effect_group>
+	</append> -->
+
+	<!-- *** Knuckles (perkBrawler) - NONE YET, FUTURE PROOFING -->
+	<!-- <append xpath="/items/item[starts-with(@name, 'IZYMelee')]/property[@name='Tags' and contains(@value, 'perkBrawler')]/..">
+		<effect_group name="Contract check">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="Holding_Knuckles,Holding_Melee,Holding_Melee_Light"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="Holding_Knuckles,Holding_Melee,Holding_Melee_Light"/>
+
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Knuckles">
+				<requirement name="!HasBuff" buff="Holding_Knuckles"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Knuckles">
+				<requirement name="!HasBuff" buff="Holding_Knuckles"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee">
+				<requirement name="!HasBuff" buff="Holding_Melee"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="Holding_Melee_Light">
+				<requirement name="!HasBuff" buff="Holding_Melee_Light"/></triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="Holding_Melee_Light">
+				<requirement name="!HasBuff" buff="Holding_Melee_Light"/></triggered_effect>
+		</effect_group>
+	</append> -->
+
+
+
+</configs>
